@@ -24,6 +24,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/carrier.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   <style>
     .left-side-icons {
   /* display: none; */
@@ -242,7 +244,7 @@
       <h2 class="career-heading">Join Our Team</h2>
       <p class="career-subheading">Fill out the form below to apply for a position.</p>
     
-      <form class="career-form">
+      <form class="career-form" id="career-form">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
     
@@ -252,13 +254,13 @@
         <label for="position">Position Applying For</label>
         <input type="text" id="position" name="position" placeholder="Enter job title" required>
     
-        <label for="resume">Upload Resume (PDF/DOC)</label>
+        <!-- <label for="resume">Upload Resume (PDF/DOC)</label>
         <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
-    
+     -->
         <label for="message">Cover Letter</label>
         <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit"></textarea>
     
-        <button type="submit">Submit Application</button>
+        <button type="submit" id="uploadBtn" >Submit Application</button>
       </form>
     </div>
     
@@ -354,6 +356,9 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Add Cloudinary's Upload Widget -->
+  <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+  <script src="carrier.js"></script>
 </body>
 
 </html>
