@@ -24,7 +24,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/carrier.css">
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 
   <style>
     .left-side-icons {
@@ -88,7 +90,7 @@
             <!-- </ul> -->
           </li>
           <li><a href="services.html" style="font-weight:900;">Services</a></li>
-          <li><a href="carrer.html" style="font-weight:900;">Carrers</a></li>
+          <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
           <li><a href="contact.html"style="font-weight:900;">Contact</a></li>
         </ul>
@@ -254,13 +256,14 @@
         <label for="position">Position Applying For</label>
         <input type="text" id="position" name="position" placeholder="Enter job title" required>
     
-        <!-- <label for="resume">Upload Resume (PDF/DOC)</label>
-        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
-     -->
+        <label for="resume">Upload Resume (PDF/DOC)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf" required>
+        <p id="error-message" style="color: red; display: none;">File size must be 50KB or less.</p>
+        
         <label for="message">Cover Letter</label>
         <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit"></textarea>
     
-        <button type="submit" id="uploadBtn" >Submit Application</button>
+        <button type="submit" id="submit-btn" disabled>Submit Application</button>
       </form>
     </div>
     
