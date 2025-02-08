@@ -2454,9 +2454,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 /*--------------------------------------------------------------
 # Widgets
@@ -2732,6 +2730,7 @@ section,
     background: #f9f9f9;
     position: relative;
     z-index: 1;
+    height: 97%;
 }
 
 
