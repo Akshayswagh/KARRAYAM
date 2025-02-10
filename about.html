@@ -33,20 +33,71 @@
   flex-direction: column;
  gap:8px;
 
-
 }
+/* our partner section */
+.partners-section {
+            max-width: 80%;
+            margin: auto;
+            padding: 50px 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .partner-item {
+            display: flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .partner-item::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.2);
+            top: -100%;
+            left: 0;
+            transition: top 0.3s ease-in-out;
+        }
+        .partner-item:hover::before {
+            top: 0;
+        }
+        .partner-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #007bff;
+            transition: transform 0.3s ease;
+        }
+        .partner-item:hover .partner-icon {
+            transform: rotate(360deg);
+        }
+        .partner-text {
+            text-align: left;
+        }
+        @media (max-width: 600px) {
+            .partner-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .partner-icon {
+                margin-bottom: 10px;
+            }
+        }
   </style>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="about-page">
@@ -147,7 +198,6 @@
             <div class="our-story">
               <h4>Est </h4>
               <h3>Our Story</h3>
-              <p>Kaaryam redefines workforce management for businesses by integrating cutting-edge technology with localized outreach. Here’s how Kaaryam delivers value beyond conventional solution:</p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> <span>Explore Tailored Employer Solutions </span></li>
                 <li><i class="bi bi-check-circle"></i> <span>Partner with Kaaryam Today</span></li>
@@ -166,60 +216,38 @@
       </div>
 
     </section><!-- /About Section -->
- <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row position-relative">
-
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="inner-title"></h2>
-            <div class="our">
-              <h4> </h4>
-              <h3>How It Works::</h3>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Job Collection: Gather local job opportunities through partnerships and community networks.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Candidate Onboarding: Job seekers create profiles on the Karyaam Dheya digital platform</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>AI Matching: The platform suggests relevant local jobs based on skills, experience, and preferences.  </span></li>
-                <li><i class="bi bi-check-circle"></i> <span>. Placement: Facilitate direct communication between job seekers and employers for seamless hiring.</span></li>
-
-			 </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
  
-
-      <div class="container">
-
-        <div class="row position-relative">
-
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="inner-title"></h2>
-            <div class="our">
-              <h4> </h4>
-              <h3>Integrated Features Across Solutions::</h3>
-              <ul>
-                <li><i class=""></i> <span>Psychometric Assessment: Personalized assessments help individuals identify their strengths and career paths.</span></li>
-                <li><i class=""></i> <span>Resume Creation: Auto-generated resumes highlight achievements, skills, and certifications..</span></li>
-                <li><i class=""></i> <span>Blockchain Verification: Immutable, tamper-proof resumes ensure instant validation for employers..</span></li>
-                <li><i class=""></i> <span>Easy Sharing: Blockchain-verified resumes can be shared .</span></li>
-
-			 </ul>
-            </div>
-          </div>
-
-        </div>
-
+<!-- our partner section -->
+<section class="partners-section">
+  <h2>Our Partners 🌟</h2>
+  <div class="partner-item">
+      <i class="fa-solid fa-globe partner-icon"></i>
+      <div class="partner-text">
+          <strong>ONDC Integration:</strong> Revolutionizing workforce access across geographic scales by connecting local talent pools to a nationwide network of employers. 🌍
       </div>
+  </div>
+  <div class="partner-item">
+      <i class="fa-solid fa-graduation-cap partner-icon"></i>
+      <div class="partner-text">
+          <strong>Skill Development Networks:</strong> Collaborating with initiatives like APSSDC to address systemic skill gaps. 🏢
+      </div>
+  </div>
+  <div class="partner-item">
+      <i class="fa-solid fa-industry partner-icon"></i>
+      <div class="partner-text">
+          <strong>Industry Pioneers:</strong> Trusted by FMCG, IT, logistics, and manufacturing sectors for innovative solutions. 🌐
+      </div>
+  </div>
+  <div class="partner-item">
+      <i class="fa-solid fa-book-open partner-icon"></i>
+      <div class="partner-text">
+          <strong>Educational Alliances:</strong> Partnering with institutions to enhance workforce readiness and resilience. 🎓
+      </div>
+  </div>
+</section>
+    
 
-    </section>
+    
     <!-- Team Section -->
     <section id="team" class="team section light-background">
 

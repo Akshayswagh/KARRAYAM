@@ -33,9 +33,64 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-
-
     }
+
+    /* why coperporates rely on karyyam */
+    .container_why_rely {
+            max-width: 100%;
+            margin: auto;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px !important;
+            margin-top: 10px;
+
+
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: 0.3s;
+        }
+        td:first-child {
+            font-weight: bold;
+            color: #333;
+        }
+        .highlight {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
   </style>
 
   <!-- Main CSS File -->
@@ -175,8 +230,7 @@
             <div class="our-story">
               <h4>Est </h4>
               <h3>Our Story</h3>
-              <p>Kaaryam redefines workforce management for businesses by integrating cutting-edge technology with
-                localized outreach. Here’s how Kaaryam delivers value beyond conventional solution:</p>
+              
               <ul>
                 <li><i class="bi bi-check-circle"></i> <span>Explore Tailored Employer Solutions </span></li>
                 <li><i class="bi bi-check-circle"></i> <span>Partner with Kaaryam Today</span></li>
@@ -204,7 +258,7 @@
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
   <h2>Key Corporate Benefits</h2>
-  <p></p>
+  
 </div><!-- End Section Title -->
 
 <div class="container">
@@ -607,7 +661,52 @@
    
      
    
+<!-- why corporates rely on karryam -->
+<div class="container_why_rely">
+  <!-- Section Title -->
+<div class="container section-title" style="padding: 0;" data-aos="fade-up">
+  <h2 >Why Corporates Rely on Kaaryam</h2>
+  
+</div><!-- End Section Title -->
 
+  <!-- <h2>🌍 Why Corporates Rely on <span style="color: #3498db;">Kaaryam</span></h2> -->
+  <table>
+      <thead>
+          <tr>
+              <th>Corporate Challenges</th>
+              <th>Traditional Practices</th>
+              <th>Kaaryam’s Transformative Approach</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>High Recruitment Overheads</td>
+              <td>Costly reliance on recruitment agencies</td>
+              <td class="highlight">Precision hiring minimizes costs via AI and blockchain.</td>
+          </tr>
+          <tr>
+              <td>Inefficient Resume Screening</td>
+              <td>Manual filtering of unverified profiles</td>
+              <td class="highlight">Blockchain-enabled verification and pre-screened candidates.</td>
+          </tr>
+          <tr>
+              <td>Limited Talent Diversity</td>
+              <td>Urban-centric hiring strategies</td>
+              <td class="highlight">Access diverse, hyperlocal talent from rural regions.</td>
+          </tr>
+          <tr>
+              <td>Employee Turnover Risks</td>
+              <td>Poor alignment of skills and roles</td>
+              <td class="highlight">Psychometric integration ensures optimal job-fit.</td>
+          </tr>
+          <tr>
+              <td>Skill Shortages for Emerging Roles</td>
+              <td>Reactive upskilling initiatives</td>
+              <td class="highlight">Proactive workforce training via tailored programs.</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 
     <!-- .........................................new section end........................................ -->
