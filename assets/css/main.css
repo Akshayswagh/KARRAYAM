@@ -1942,6 +1942,7 @@ section,
 
 .blog-posts .post-img img {
   transition: 0.5s;
+  width: 100%;
 }
 
 .blog-posts .post-date {
