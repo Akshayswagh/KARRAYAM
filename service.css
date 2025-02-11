@@ -159,8 +159,11 @@ h2 {
 .step-item {
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f39c12, #d35400);
-  color: #fff;
+  /* background: linear-gradient(135deg, #f39c12, #d35400); */
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+
+  /* color: #fff; */
+  color: black;
   padding: 20px;
   margin: 10px 0;
   border-radius: 12px;
@@ -169,8 +172,8 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .step-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(243, 156, 18, 0.3);
+  transform: scale(1.01);
+  box-shadow: 0 15px 30px rgba(157, 156, 154, 0.3);
 }
 .step-icon {
   font-size: 2rem;
