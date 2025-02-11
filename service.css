@@ -171,6 +171,11 @@ h2 {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.step-text strong{
+  font-size: 1.2rem;
+}
+
+
 .step-item:hover {
   transform: scale(1.01);
   box-shadow: 0 15px 30px rgba(157, 156, 154, 0.3);
