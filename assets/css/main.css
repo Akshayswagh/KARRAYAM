@@ -761,6 +761,7 @@ section,
   text-align: center;
   padding-bottom: 60px;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .section-title h2 {
