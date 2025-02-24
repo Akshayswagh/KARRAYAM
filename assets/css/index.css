@@ -1,0 +1,6 @@
+.hoverstyle:hover a {
+    color: #f12400 !important; /* Change this to your desired color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+

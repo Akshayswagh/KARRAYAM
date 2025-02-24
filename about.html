@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kaaryam</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    .left-side-icons {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+ gap:8px;
+
+}
+/* our partner section */
+.partners-section {
+            max-width: 80%;
+            margin: auto;
+            padding: 50px 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .partner-item {
+            display: flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .partner-item::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.2);
+            top: -100%;
+            left: 0;
+            transition: top 0.3s ease-in-out;
+        }
+        .partner-item:hover::before {
+            top: 0;
+        }
+        .partner-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #007bff;
+            transition: transform 0.3s ease;
+        }
+        .partner-item:hover .partner-icon {
+            transform: rotate(360deg);
+        }
+        .partner-text {
+            text-align: left;
+        }
+        @media (max-width: 600px) {
+            .partner-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .partner-icon {
+                margin-bottom: 10px;
+            }
+        }
+  </style>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+                <!-- <img src="assets/img/logo.png" class="img-responsive" style="padding: 0px 7px 2px -9px; width:100%;max-width:221px;">  -->
+                <img src="assets/img/dheya.png" 
+                class="img-responsive" 
+                style="padding: 0px; height: 300px;">
+           
+      </a>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" style="font-weight:900;">Home</a></li>
+		            <li><a href="about.html" style="font-weight:900;">About us</a></li>
+
+          <!-- <li class="dropdown"><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+            <!-- <ul> -->
+              <!-- <li><a href="team.html">Team</a></li> -->
+              <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
+              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+                <!-- <ul> -->
+                  <!-- <li><a href="#">Deep Dropdown 1</a></li> -->
+                  <!-- <li><a href="#">Deep Dropdown 2</a></li> -->
+                  <!-- <li><a href="#">Deep Dropdown 3</a></li> -->
+                  <!-- <li><a href="#">Deep Dropdown 4</a></li> -->
+                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
+                <!-- </ul> -->
+              <!-- </li> -->
+            <!-- </ul> -->
+          </li>
+          <li><a href="services.html" style="font-weight:900;">Services</a></li>
+          <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li><a href="" style="font-weight:900;">News</a></li>
+          <li><a href="" style="font-weight:900;">Events</a></li>
+          <li><a href="contact.html"style="font-weight:900;">Contact</a></li>
+        
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <div class="left-side-icons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" style="width: 25px; height: 25px; margin-left: 5px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 25px; height: 25px; margin-left: 5px;">
+          <img src="data:image/png;base64,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"alt="inkedin Logo" style="width: 25px; height: 25px; margin-left: 5px;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs0WJA4Z9uqS5TztNYJaRZ07HTtDbMnjZtdg&s"alt=" twitter Logo" style="width: 25px; height: 25px; margin-left: 5px;">
+          
+                 
+      </div> 
+          
+         </div>     
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">About</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+      <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row position-relative">
+
+          <div class="col-lg-4 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="assets/img/about-us.jpeg"></div>
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="inner-title"></h2>
+            <div class="our-story">
+              <h4>Est </h4>
+              <h3>Our Story</h3>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Explore Tailored Employer Solutions </span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Partner with Kaaryam Today</span></li>
+              </ul>
+              <p>Kaaryam delivers a groundbreaking approach to recruitment, addressing inefficiencies in talent acquisition through precision-driven AI, blockchain-verified identities, and localized talent pooling. Our comprehensive suite of services supports corporations in achieving optimal alignment between workforce strategies and organizational goals, ensuring a competitive edge in a dynamic global landscape..</p>
+
+              <!-- <div class="watch-video d-flex align-items-center position-relative"> -->
+                <!-- <i class="bi bi-play-circle"></i> -->
+                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox stretched-link">Watch Video</a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+ 
+ <!-- Services Section -->
+ <div id="services" class="services section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Partners</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div style="justify-content: center;" class="row gy-4">
+
+      <div class="col-lg-3 col-md-6 hoverstyle " data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+              </path>
+            </svg>
+            <i class="fa-solid fa-globe partner-icon"></i>
+          </div>
+          <a href="Services for Employers.html" class="stretched-link ">
+            <h3>ONDC Integration
+            </h3>
+            <p style="color: black;">Revolutionizing workforce access across geographic scales by connecting local talent pools to a nationwide network of employers.</p>
+          </a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+              </path>
+            </svg>
+            <i class="fa-solid fa-graduation-cap partner-icon"></i>
+          </div>
+          <a href="Services for Skilling Institutes.html" class="stretched-link">
+            <h3>Skill Development Networks</h3>
+            <p style="color: black;">Collaborating with initiatives like APSSDC to address systemic skill gaps.</p>
+          </a>
+        </div>
+      </div><!-- End Service Item -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+              </path>
+            </svg>  
+            <i class="fa-solid fa-industry partner-icon"></i>
+
+          </div>
+          <a href="Services for Scholarship providers.html" class="stretched-link">
+            <h3>Industry Pioneers</h3>
+            <p style="color: black;">Trusted by FMCG, IT, logistics, and manufacturing sectors for innovative solutions.</p>
+          </a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
+              </path>
+            </svg>
+            <i class="fa-solid fa-book-open partner-icon"></i>
+          </div>
+          <a href="Services fro Governments.html" class="stretched-link">
+            <h3>Educational Alliances</h3>
+            <p style="color: black;">Partnering with institutions to enhance workforce readiness and resilience.</p>
+            <p></p>
+          </a>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+  </div>
+</div>
+</section>
+<!-- /Services Section -->
+    
+
+    
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+     <section id="team" class="team section">
+       <!-- Section Title -->
+       <div class="container section-title" data-aos="fade-up">
+        <h2>Board of Advisors</h2>
+       
+      </div><!-- End Section Title -->
+
+      <div class="container" >
+
+        <div class="row gy-4" style="justify-content: center;">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <!-- <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""> -->
+
+              </div>
+              <div class="member-info">
+                <h4>Dilip Dongre </h4>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <!-- <img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""> -->
+                
+              </div>
+              <div class="member-info">
+                <h4>Sunil Kasture</h4>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <!-- <img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""> -->
+              </div>
+              <div class="member-info">
+                <h4>George Bernard Shaw</h4>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+    <!-- ................................. -->
+     
+    <!-- Team Section -->
+    <section id="team"  class="team section light-background">
+      <section id="team"  class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+         <h2>Our Team</h2>
+        
+       </div><!-- End Section Title -->
+ 
+       <div class="container">
+ 
+         <div class="row gy-4" style="justify-content: center;">
+ 
+           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+             <div class="team-member">
+               <div class="member-img">
+                 <!-- <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""> -->
+ 
+               </div>
+               <div class="member-info">
+                 <h4>Anand Desai</h4>
+                 <span>Program Head</span>
+               </div>
+             </div>
+           </div><!-- End Team Member -->
+ 
+           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+             <div class="team-member">
+               <div class="member-img">
+                 <!-- <img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""> -->
+                 
+               </div>
+               <div class="member-info">
+                 <h4>Venkatesh Bejgamwar</h4>
+                 <span>Mission Director</span>
+               </div>
+             </div>
+           </div><!-- End Team Member -->
+ 
+           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+             <div class="team-member">
+               <div class="member-img">
+                 <!-- <img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""> -->
+                
+               </div>
+               <div class="member-info">
+                 <h4>Vikram Bhokare</h4>
+                 <span>Manager-Operations</span>
+               </div>
+             </div>
+           </div><!-- End Team Member --> 
+         </div>
+ 
+       </div>
+ 
+     </section><!-- /Team Section -->
+ 
+ 
+
+
+   
+
+  </main>
+<footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Address</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>102 Tejovalaya, Ghole Rd, off Jangali Maharaj Road, Sumukh Society, Shivajinagar, Pune, Maharashtra 411005</p>
+            <p></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 866 890 2705
+
+</span></p>
+            <p><strong>Email:</strong> <span>corporates@kaaryam.in
+
+</span></p>
+          </div>
+        
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+		
+          <h4>Links</h4>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2024</span> <strong class="px-1 sitename">Dheya Career Mentors Pvt. Ltd.
+</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://gptsoftwares.in/">GPT SOFTWARE</a> <a href=“https://themewagon.com>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
