@@ -34,7 +34,66 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- steps to collaborate -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+   .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
 
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .step-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+        }
+
+        .icon-container img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .content h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #666;
+        }
+</style>
 
 </head>
 
@@ -56,8 +115,8 @@
           </li>
           <li><a href="services.html" style="font-weight:900;">Services</a></li>
           <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
-          <li><a href="" style="font-weight:900;">News</a></li>
-          <li><a href="" style="font-weight:900;">Events</a></li>
+          <li><a href="" style="font-weight:900;">News & Events</a></li>
+
           <li><a href="contact.html" style="font-weight:900;">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -188,40 +247,41 @@
     </div>
     </section>
     <!-- /Services Section -->
-    <!-- steps to collaborate -->
-    <section class="section-container">
-      <h2>Steps to Collaborate </h2>
-      <div class="steps-container">
-        <div class="step-item">
-          <i class="fa-solid fa-book step-icon"></i>
-          <div class="step-text">
-            <strong>Step 1: Consult with Kaaryam Experts </strong><br>
-            Engage with our specialists to identify challenges and outline tailored recruitment solutions.
+
+    <section>
+      <!-- steps to collaborate -->
+    <div class="container">
+      <h2>Steps to Collaborate</h2>
+      <div class="steps-grid">
+          <div class="step-card">
+              <div class="icon-container" style="background-color: #e0f3ff;">
+                <i class="fas fa-user-tie fa-2x" style="color: #007bff;"></i>
+              </div>
+              <div class="content">
+                  <h3>Consult with Kaaryam Experts</h3>
+                  <p>Engage with our specialists to identify challenges and outline tailored recruitment solutions.</p>
+              </div>
           </div>
-        </div>
-        <div class="step-item">
-          <i class="fa-solid fa-building-columns step-icon"></i>
-          <div class="step-text">
-            <strong>Step 2: Develop a Strategic Hiring Framework </strong><br>
-            Collaborate on designing a bespoke strategy leveraging Kaaryam’s advanced technological infrastructure.
+          <div class="step-card">
+              <div class="icon-container" style="background-color: #ffe7cc;">
+                <i class="fas fa-lightbulb fa-2x" style="color: #ff6600;"></i>
+              </div>
+              <div class="content">
+                  <h3>Develop a Strategic Hiring Framework</h3>
+                  <p>Collaborate on designing a bespoke strategy leveraging Kaaryam’s advanced technological infrastructure.</p>
+              </div>
           </div>
-        </div>
-        <div class="step-item">
-          <i class="fa-solid fa-rocket step-icon"></i>
-          <div class="step-text">
-            <strong>Step 3: Deploy Recruitment Solutions </strong><br>
-            Launch a customized recruitment campaign, benefiting from verified talent pools and hyperlocalized
-            networks.
+          <div class="step-card">
+              <div class="icon-container" style="background-color: #e3f6db;">
+                <i class="fas fa-rocket fa-2x" style="color: #28a745;"></i>
+              </div>
+              <div class="content">
+                  <h3>Deploy Recruitment Solutions</h3>
+                  <p>Launch a customized recruitment campaign, benefiting from verified talent pools and hyperlocalized networks.</p>
+              </div>
           </div>
-        </div>
-        <div class="step-item">
-          <i class="fa-solid fa-cogs step-icon"></i>
-          <div class="step-text">
-            <strong>Step 4: Monitor and Optimize Outcomes </strong><br>
-            Leverage analytics to assess hiring impact and refine strategies for sustained success.
-          </div>
-        </div>
       </div>
+  </div>
     </section>
     <!-- ................................................................. -->
 

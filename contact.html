@@ -35,6 +35,74 @@
 
 
 }
+.career-form-container {
+    max-width: 55%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .career-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: #007bff; */
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .career-subheading {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .career-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .career-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .career-form input,
+  .career-form textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .career-form input:focus,
+  .career-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .career-form button {
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .career-form button:hover {
+    background: #0056b3;
+  }
+
   </style>
 
   <!-- Main CSS File -->
@@ -87,8 +155,8 @@
           <li><a href="services.html" style="font-weight:900;">Services</a></li>
           <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a href="" style="font-weight:900;">News</a></li>
-          <li><a href="" style="font-weight:900;">Events</a></li>
+          <li><a href="" style="font-weight:900;">News & Events</a></li>
+
           <li><a href="contact.html"style="font-weight:900;">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -180,31 +248,32 @@
             </div>
 
           </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button style="background-color: #007bff;" type="submit">Send Message</button></div>
+          <div class="career-form-container">
+            <h2 class="career-heading">Join Our Team</h2>
+            <p class="career-subheading">Fill out the form below to apply for a position.</p>
+          
+            <form class="career-form" id="career-form">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+              <label for="position">Position Applying For</label>
+              <input type="text" id="position" name="position" placeholder="Enter job title" required>
+          
+              <label for="resume">Upload Resume (PDF/DOC)</label>
+              <input type="file" id="resume" name="resume" accept=".pdf" required>
+              <p id="error-message" style="color: red; display: none;">File size must be 50KB or less.</p>
+              
+              <label for="message">Cover Letter</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit"></textarea>
+          
+              <button type="submit" id="submit-btn" disabled>Submit Application</button>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+          
+      <!-- End Contact Form -->
 
         </div>
 
