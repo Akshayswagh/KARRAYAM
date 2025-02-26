@@ -1,5 +1,5 @@
 .service-container {
-  max-width: 800px;
+  width: 80% !important;
   margin: 40px auto;
   padding: 20px;
   text-align: center;
@@ -8,7 +8,7 @@
 .service-heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #D86F10;
+  color: #d86f10;
   margin-bottom: 15px;
   opacity: 0;
   transform: translateY(-20px);

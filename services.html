@@ -34,65 +34,61 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- steps to collaborate -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-   .container {
-            max-width: 1000px;
-            width: 100%;
-            text-align: center;
-        }
+<style>       
+.collab-container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
 
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #333;
-        }
+.collab-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+.collab-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
-        .step-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: 0.3s ease-in-out;
-        }
+.collab-step-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
 
-        .step-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+.collab-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .icon-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-        }
+.collab-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+}
 
-        .icon-container img {
-            width: 40px;
-            height: 40px;
-        }
+.collab-content h3 {
+  font-size: 18px;
+  margin-bottom: 9px;
+  color: #000;
+  font-weight: 700;
+}
 
-        .content h3 {
-            font-size: 16px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .content p {
-            font-size: 14px;
-            color: #666;
-        }
+.collab-content p {
+  font-size: 14px;
+  color: #666;
+}
 </style>
 
 </head>
@@ -248,42 +244,60 @@
     </section>
     <!-- /Services Section -->
 
-    <section>
-      <!-- steps to collaborate -->
-    <div class="container">
-      <h2>Steps to Collaborate</h2>
-      <div class="steps-grid">
-          <div class="step-card">
-              <div class="icon-container" style="background-color: #e0f3ff;">
+    
+<!-- ................................................................. -->
+
+
+<!-- Services Section -->
+<div id="services" class="services section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Steps to Collaborate</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div style="justify-content: center;" class="row gy-4">
+
+      <div class="collab-steps-grid">
+
+        <div class="collab-step-card">
+            <div class="collab-icon-container" style="background-color: #e0f3ff;">
                 <i class="fas fa-user-tie fa-2x" style="color: #007bff;"></i>
-              </div>
-              <div class="content">
-                  <h3>Consult with Kaaryam Experts</h3>
-                  <p>Engage with our specialists to identify challenges and outline tailored recruitment solutions.</p>
-              </div>
-          </div>
-          <div class="step-card">
-              <div class="icon-container" style="background-color: #ffe7cc;">
+            </div>
+            <div class="collab-content">
+                <h3>Consult with Kaaryam Experts</h3>
+                <p>Engage with our specialists to identify challenges and outline tailored recruitment solutions.</p>
+            </div>
+        </div>
+
+        <div class="collab-step-card">
+            <div class="collab-icon-container" style="background-color: #ffe7cc;">
                 <i class="fas fa-lightbulb fa-2x" style="color: #ff6600;"></i>
-              </div>
-              <div class="content">
-                  <h3>Develop a Strategic Hiring Framework</h3>
-                  <p>Collaborate on designing a bespoke strategy leveraging Kaaryam’s advanced technological infrastructure.</p>
-              </div>
-          </div>
-          <div class="step-card">
-              <div class="icon-container" style="background-color: #e3f6db;">
+            </div>
+            <div class="collab-content">
+                <h3>Develop a Strategic Hiring Framework</h3>
+                <p>Collaborate on designing a bespoke strategy leveraging Kaaryam’s advanced technological infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="collab-step-card">
+            <div class="collab-icon-container" style="background-color: #e3f6db;">
                 <i class="fas fa-rocket fa-2x" style="color: #28a745;"></i>
-              </div>
-              <div class="content">
-                  <h3>Deploy Recruitment Solutions</h3>
-                  <p>Launch a customized recruitment campaign, benefiting from verified talent pools and hyperlocalized networks.</p>
-              </div>
-          </div>
-      </div>
-  </div>
-    </section>
-    <!-- ................................................................. -->
+            </div>
+            <div class="collab-content">
+                <h3>Deploy Recruitment Solutions</h3>
+                <p>Launch a customized recruitment campaign, benefiting from verified talent pools and hyperlocalized networks.</p>
+            </div>
+        </div>
+
+    </div>
+
+     
+     
+    </div>
+   
+
+<!-- /Services Section -->
 
 
   </main>
@@ -321,7 +335,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
             <li><a href="#">Web Design</a></li>
@@ -330,7 +344,7 @@
             <li><a href="#">Marketing</a></li>
             <li><a href="#">Graphic Design</a></li>
           </ul>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
 
@@ -379,28 +393,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    let openIndex = null;
-    function toggleFAQ(index) {
-      const answers = document.querySelectorAll('.faq-answer');
-      const questions = document.querySelectorAll('.faq-question');
-
-      if (openIndex !== null && openIndex !== index) {
-        answers[openIndex].classList.remove('active');
-        questions[openIndex].classList.remove('active');
-      }
-
-      if (answers[index].classList.contains('active')) {
-        answers[index].classList.remove('active');
-        questions[index].classList.remove('active');
-        openIndex = null;
-      } else {
-        answers[index].classList.add('active');
-        questions[index].classList.add('active');
-        openIndex = index;
-      }
-    }
-  </script>
+  
 </body>
 
 </html>

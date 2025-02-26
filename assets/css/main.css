@@ -12,13 +12,15 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Nunito",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Nunito", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #111111; /* Color for headings, subheadings and title throughout the website */
@@ -29,7 +31,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
+  --nav-color: #444444; /* The default color of the main navmenu links */
   --nav-hover-color: orange; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -66,6 +68,15 @@
   scroll-behavior: smooth;
 }
 
+.service-container {
+  width: 80% !important;
+}
+
+/* service  */
+.service-heading {
+  color: black !important ;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -80,7 +91,6 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
-
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
@@ -271,7 +281,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -310,11 +320,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -326,7 +336,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -429,7 +439,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -456,7 +466,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -473,7 +483,8 @@ h6 {
 
 .footer .footer-top {
   padding-top: 50px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-about .logo {
@@ -496,7 +507,8 @@ h6 {
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  /* font-family: var(--heading-font); */
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .footer .social-links a {
@@ -523,6 +535,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  text-align: start;
 }
 
 .footer .footer-links {
@@ -581,7 +594,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type="email"] {
   border: 0;
   padding: 4px;
   width: 100%;
@@ -589,11 +602,11 @@ h6 {
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
   border: 0;
   font-size: 16px;
   padding: 0 20px;
@@ -604,13 +617,14 @@ h6 {
   border-radius: 0 4px 4px 0;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -724,11 +738,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -748,11 +762,9 @@ section,
   overflow: clip;
   width: 90%;
   margin: auto;
-
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -810,8 +822,7 @@ section,
   position: relative;
 }
 
-@media (max-height: 500px),
-(max-width: 1200px) {
+@media (max-height: 500px), (max-width: 1200px) {
   .hero .carousel {
     min-height: calc(100vh - 48px);
   }
@@ -1301,8 +1312,10 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients .clients-wrap {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
+  border-left: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .clients .client-logo {
@@ -1310,8 +1323,10 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-right: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
   overflow: hidden;
 }
 
@@ -1571,7 +1586,8 @@ section,
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-left: 3px solid
+    color-mix(in srgb, var(--default-color), transparent 70%);
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
@@ -1660,7 +1676,6 @@ section,
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -2137,7 +2152,7 @@ section,
   margin: 0;
 }
 
-.blog-details .meta-top ul li+li {
+.blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2157,7 +2172,8 @@ section,
 
 .blog-details .meta-bottom {
   padding-top: 10px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .blog-details .meta-bottom i {
@@ -2196,7 +2212,7 @@ section,
   display: inline-block;
 }
 
-.blog-details .meta-bottom .tags li+li::before {
+.blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--default-color);
   content: ",";
@@ -2375,10 +2391,11 @@ section,
   font-size: 15px;
 }
 
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   padding-top: 20px;
   margin-top: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .contact .info-item i {
@@ -2412,8 +2429,8 @@ section,
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   color: var(--default-color);
   background-color: var(--surface-color);
@@ -2423,20 +2440,20 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email] {
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"] {
   height: 48px;
   padding: 10px 15px;
 }
@@ -2446,7 +2463,7 @@ section,
   height: 290px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--accent-color);
   color: var(--contrast-color);
   border: 0;
@@ -2455,7 +2472,7 @@ section,
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
 @media (max-width: 991px) {
@@ -2467,7 +2484,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-
 
 /*--------------------------------------------------------------
 # Widgets
@@ -2536,7 +2552,7 @@ section,
   transition: 0.3s;
 }
 
-.search-widget form input[type=text] {
+.search-widget form input[type="text"] {
   border: 0;
   padding: 4px 10px;
   border-radius: 4px;
@@ -2545,7 +2561,7 @@ section,
   color: var(--default-color);
 }
 
-.search-widget form input[type=text]:focus {
+.search-widget form input[type="text"]:focus {
   outline: none;
 }
 
@@ -2640,149 +2656,163 @@ section,
 }
 
 .box {
-    border-radius: 3px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    padding: 10px 25px;
-    text-align: right;
-    display: block;
-    margin-top: 60px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px 25px;
+  text-align: right;
+  display: block;
+  margin-top: 60px;
 }
 .box-icon {
-    background-color: #345766;
-    border-radius: 50%;
-    display: table;
-    height: 100px;
-    margin: 0 auto;
-    width: 100px;
-    margin-top: -61px;
+  background-color: #345766;
+  border-radius: 50%;
+  display: table;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: -61px;
 }
 .box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+  color: #fff;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 .info h4 {
-    font-size: 26px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .info > p {
-    color: #717171;
-    font-size: 16px;
-    padding-top: 10px;
-    text-align: justify;
+  color: #717171;
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: justify;
 }
 .info > a {
-    background-color: #03a9f4;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
+  background-color: #03a9f4;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  transition: all 0.5s ease 0s;
 }
 .info > a:hover {
-    background-color: #0288d1;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
+  background-color: #0288d1;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  transition: all 0.5s ease 0s;
 }
 
-
-.serviceBox{
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    padding-top: 10px;
+.serviceBox {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.serviceBox .service-icon{
-    color: #fff;
-    background: #fff;
-    font-size: 45px;
-    line-height: 100px;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1;
+.serviceBox .service-icon {
+  color: #fff;
+  background: #fff;
+  font-size: 45px;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 .serviceBox .service-icon:before,
-.serviceBox .service-icon:after{
-    content: "";
-    background: linear-gradient(to right, #F09119 50%, transparent 50%);
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    z-index: -1;
+.serviceBox .service-icon:after {
+  content: "";
+  background: linear-gradient(to right, #f09119 50%, transparent 50%);
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
   transition: all ease 0.8s;
 }
-.serviceBox:hover .service-icon:before, .serviceBox:hover .service-icon:after {
-    transform: rotateZ(180deg);
+.serviceBox:hover .service-icon:before,
+.serviceBox:hover .service-icon:after {
+  transform: rotateZ(180deg);
 }
 .serviceBox:hover .service-icon {
-    box-shadow: -5px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-.serviceBox .service-icon:after{
-    background: #F09119;
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+.serviceBox .service-icon:after {
+  background: #f09119;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
 }
 .serviceBox {
-    border: 1px solid #e5e4e4;
-    padding: 40px;
-    border-radius: 20px;
-    background: #f9f9f9;
-    position: relative;
-    z-index: 1;
-    height: 97%;
+  border: 1px solid #e5e4e4;
+  padding: 40px;
+  border-radius: 20px;
+  background: #f9f9f9;
+  position: relative;
+  z-index: 1;
+  height: 97%;
 }
 
-
-.serviceBox .title{
-    color: #F1921A;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 0 0 10px;
+.serviceBox .title {
+  color: #f1921a;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 10px;
 }
 
-.serviceBox .description{
-    color: #777;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 0;
+.serviceBox .description {
+  color: #777;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
-.serviceBox.red .service-icon:before{ background: linear-gradient(to right, #E34A3A 50%, transparent 50%); }
-.serviceBox.red .service-icon:after{ background: #E34A3A; }
-.serviceBox.red .title{ color: #E34A3A; }
-
-.serviceBox.blue .service-icon:before{ background: linear-gradient(to right, #009CB5 50%, transparent 50%); }
-.serviceBox.blue .service-icon:after{ background: #009CB5; }
-.serviceBox.blue .title{ color: #009CB5; }
-
-.serviceBox.green .service-icon:before{ background: linear-gradient(to right, #A1C52D 50%, transparent 50%); }
-.serviceBox.green .service-icon:after{ background: #A1C52D; }
-.serviceBox.green .title{ color: #A1C52D; }
-
-@media only screen and (max-width:990px){
-    .serviceBox{ margin: 0 0 30px; }
+.serviceBox.red .service-icon:before {
+  background: linear-gradient(to right, #e34a3a 50%, transparent 50%);
+}
+.serviceBox.red .service-icon:after {
+  background: #e34a3a;
+}
+.serviceBox.red .title {
+  color: #e34a3a;
 }
 
+.serviceBox.blue .service-icon:before {
+  background: linear-gradient(to right, #009cb5 50%, transparent 50%);
+}
+.serviceBox.blue .service-icon:after {
+  background: #009cb5;
+}
+.serviceBox.blue .title {
+  color: #009cb5;
+}
 
+.serviceBox.green .service-icon:before {
+  background: linear-gradient(to right, #a1c52d 50%, transparent 50%);
+}
+.serviceBox.green .service-icon:after {
+  background: #a1c52d;
+}
+.serviceBox.green .title {
+  color: #a1c52d;
+}
 
-
-
+@media only screen and (max-width: 990px) {
+  .serviceBox {
+    margin: 0 0 30px;
+  }
+}
 
 @media (min-width: 1198px) {
-  }
+}
