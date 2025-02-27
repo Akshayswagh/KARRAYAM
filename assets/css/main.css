@@ -771,6 +771,7 @@ section,
   }
 }
 
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
@@ -991,7 +992,7 @@ section,
 }
 
 .about .our-story {
-  padding: 40px;
+  padding: 5px;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 }
 
@@ -999,6 +1000,23 @@ section,
   .about .our-story {
     padding-right: 35%;
   }
+  
+}
+
+
+@media (max-width: 991px) {
+
+  .career-form-container {
+    position: relative;
+}}
+
+
+
+@media (max-width: 768px) {
+  .about .our-story {
+    position: relative;
+    bottom: 100px;
+}  
 }
 
 .about .our-story h4 {
@@ -2383,6 +2401,8 @@ section,
 .contact .info h3 {
   font-weight: 600;
   font-size: 24px;
+  text-align: center;
+    padding-top: 17px;
 }
 
 .contact .info p {
@@ -2400,7 +2420,7 @@ section,
 
 .contact .info-item i {
   font-size: 24px;
-  color: var(--accent-color);
+  color: #007bff;
   transition: all 0.3s ease-in-out;
   margin-right: 20px;
 }

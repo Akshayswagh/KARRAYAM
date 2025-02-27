@@ -110,18 +110,21 @@
 
 }
 
-  </style>
 
+@media (max-width: 600px) {
+  .contact .info {
+    padding: 10px !important;
+}
+.career-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+}
+</style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body class="contact-page">
@@ -162,7 +165,7 @@
           <li><a href="services.html" style="font-weight:900;">Services</a></li>
           <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a href="" style="font-weight:900;">News & Events</a></li>
+          <li><a href="newsEvents.html" style="font-weight:900;">News & Events</a></li>
 
           <li><a href="contact.html"style="font-weight:900;">Contact</a></li>
         </ul>
@@ -256,8 +259,7 @@
 
           </div>
           <div class="career-form-container">
-            <h2 class="career-heading">Join Our Team</h2>
-            <p class="career-subheading">Fill out the form below to apply for a position.</p>
+            <h2 class="career-heading">Conatct</h2>
           
             <form class="career-form" id="career-form">
               <label for="name">Full Name</label>
@@ -266,17 +268,12 @@
               <label for="email">Email Address</label>
               <input type="email" id="email" name="email" placeholder="Enter your email" required>
           
-              <label for="position">Position Applying For</label>
-              <input type="text" id="position" name="position" placeholder="Enter job title" required>
           
-              <label for="resume">Upload Resume (PDF/DOC)</label>
-              <input type="file" id="resume" name="resume" accept=".pdf" required>
-              <p id="error-message" style="color: red; display: none;">File size must be 50KB or less.</p>
               
-              <label for="message">Cover Letter</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit"></textarea>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Type here..."></textarea>
           
-              <button type="submit" id="submit-btn" disabled>Submit Application</button>
+              <button type="submit" id="submit-btn" >Send Message</button>
             </form>
           </div>
           
@@ -379,6 +376,62 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("ZCjlwK0qSqTS_l0HH"); // ⚠️ Use your actual EmailJS public key
+
+  const form = document.getElementById("career-form");
+  const submitBtn = document.getElementById("submit-btn");
+
+  if (!form || !submitBtn) {
+    console.error("❌ Form or submit button not found!");
+    return;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    console.log("🟢 Form submission started...");
+
+    // Disable button and change text
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
+    // Collect form data
+    let formData = {
+      from_name: document.getElementById("name").value,
+      message: document.getElementById("message").value,
+      from_email: document.getElementById("email").value,
+    };
+
+    console.log("📨 Sending email with data:", formData);
+
+    // Send email using EmailJS
+    emailjs.send("service_r3u8ivn", "template_3diy3sd", formData)
+      .then(function (response) {
+        console.log("✅ Email sent successfully!", response);
+        alert("✅ Message sent successfully!");
+
+        form.reset(); // Reset the form
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message"; // Reset button text
+      })
+      .catch(function (error) {
+        console.error("❌ EmailJS Error:", error);
+        alert("❌ Failed to send message. Check console for details.");
+
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message"; // Reset button text
+      });
+  });
+});
+
+
+</script>
 
 </body>
 
