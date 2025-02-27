@@ -26,7 +26,9 @@
   <link rel="stylesheet" href="/assets/css/carrier.css">
   <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  
 </script>
+
 
   <style>
     .left-side-icons {
@@ -110,6 +112,11 @@
     
   }
   
+  @media (max-width: 991px) {
+    .career-form-container {
+        bottom: 141px;
+    }
+  }
   .career-form button:hover {
     background: #0056b3;
   }
@@ -131,13 +138,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body class="about-page">
@@ -160,21 +161,7 @@
           <li><a href="index.html" style="font-weight:900;">Home</a></li>
 		            <li><a href="about.html" style="font-weight:900;">About us</a></li>
 
-          <!-- <li class="dropdown"><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
-            <!-- <ul> -->
-              <!-- <li><a href="team.html">Team</a></li> -->
-              <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
-                <!-- <ul> -->
-                  <!-- <li><a href="#">Deep Dropdown 1</a></li> -->
-                  <!-- <li><a href="#">Deep Dropdown 2</a></li> -->
-                  <!-- <li><a href="#">Deep Dropdown 3</a></li> -->
-                  <!-- <li><a href="#">Deep Dropdown 4</a></li> -->
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
-                <!-- </ul> -->
-              <!-- </li> -->
-            <!-- </ul> -->
-          </li>
+         
           <li><a href="services.html" style="font-weight:900;">Services</a></li>
           <li><a href="carrer.html" style="font-weight:900;">Careers</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
@@ -259,9 +246,10 @@
 
     </section>
     <!-- /About Section -->
+
     <div class="career-form-container">
       <h2 class="career-heading">Join Our Team</h2>
-      <p class="career-subheading">Fill out the form below to apply for a position.</p>
+      <p class="career-subheading" required >Fill out the form below to apply for a position.</p>
     
       <form class="career-form" id="career-form">
         <label for="name">Full Name</label>
@@ -273,17 +261,15 @@
         <label for="position">Position Applying For</label>
         <input type="text" id="position" name="position" placeholder="Enter job title" required>
     
-        <label for="resume">Upload Resume (PDF/DOC)</label>
+        <label for="resume">Upload Resume (PDF)</label>
         <input type="file" id="resume" name="resume" accept=".pdf" required>
-        <p id="error-message" style="color: red; display: none;">File size must be 50KB or less.</p>
-        
+    
         <label for="message">Cover Letter</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit"></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us why you're a great fit" required></textarea>
     
-        <button type="submit" id="submit-btn" disabled>Submit Application</button>
+        <button class="submit-Btn" type="submit">Submit Application</button>
       </form>
-    </div>
-    
+    </div>    
 
   </main>
 <footer id="footer" class="footer dark-background">

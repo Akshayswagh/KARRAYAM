@@ -1,73 +1,83 @@
-emailjs.init("l0fYXLDfSsNXOzsgd"); // Replace with your EmailJS user ID
+const submitButton = document.querySelector(".submit-Btn");
 
-let uploadedResumeUrl = ""; // Store the Cloudinary resume URL
+(function() {
+  emailjs.init("ZCjlwK0qSqTS_l0HH"); // Replace with your EmailJS User ID
+})();
 
-document.getElementById("resume").addEventListener("change", function () {
-  const file = this.files[0]; // Get the selected file
-  const maxSize = 500 * 1024; // 50KB in bytes
+document.getElementById("career-form").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  // Disable button and change text
+  // Change the inner text
+submitButton.innerText = "Submitting...";
 
-  if (file && file.size > maxSize) {
-    document.getElementById("error-message").style.display = "block";
-    this.value = ""; // Clear the input
-    uploadedResumeUrl = ""; // Reset uploaded URL
-    document.getElementById("submit-btn").disabled = true; // Disable submit
-  } else {
-    document.getElementById("error-message").style.display = "none";
+  let formData = new FormData(this);
+  let file = document.getElementById("resume").files[0];
 
-    // Upload file to Cloudinary
-    const cloudinaryWidget = cloudinary.createUploadWidget(
-      {
-        cloudName: "dpsf7ynmr", // Replace with your Cloudinary Cloud Name
-        uploadPreset: "KARRYAM", // Replace with your Cloudinary Upload Preset
-        sources: ["local"],
-        multiple: false,
-        resourceType: "auto",
-      },
-      (error, result) => {
-        if (result.event === "success") {
-          uploadedResumeUrl = result.info.secure_url; // Store Cloudinary URL
-          console.log(uploadedResumeUrl);
-          alert("Resume uploaded successfully!");
-          document.getElementById("submit-btn").disabled = false; // Enable submit
-        }
-      }
-    );
+  if (file.size > 500 * 1024) {
+    alert("File size must be 5MB or less.");
+    return;
+  }
 
-    cloudinaryWidget.open(); // Open Cloudinary widget
+  // Step 1: Upload file to Cloudinary
+  let cloudinaryFormData = new FormData();
+  cloudinaryFormData.append("file", file);
+  cloudinaryFormData.append("upload_preset", "karrayam"); // Replace with your Cloudinary Upload Preset
+
+  try {
+    let uploadResponse = await fetch("https://api.cloudinary.com/v1_1/dpsf7ynmr/image/upload", {
+      method: "POST",
+      body: cloudinaryFormData
+    });
+
+    let uploadData = await uploadResponse.json();
+    let resumeUrl = uploadData.secure_url; // Get the uploaded file URL
+
+
+    let optimizedUrl = resumeUrl.replace("/upload/", "/upload/f_auto,q_auto/");
+console.log("Optimized Resume URL:", optimizedUrl);
+
+
+    // Step 2: Send Email via EmailJS
+    let templateParams = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      position: formData.get("position"),
+      message: formData.get("message"),
+      resume_link: optimizedUrl // Pass Cloudinary file link
+    };
+
+    emailjs.send("service_iqj7ado", "template_wglcwhb", templateParams)
+      .then(response => {
+        // console.log("✅ Email sent successfully!", response);
+        alert("✅ Application sent successfully!");
+        const form = document.getElementById("career-form");
+        form.reset(); // Reset the form
+
+        submitButton.disabled = false;
+
+        submitButton.innerText = "Send Message"; // Reset button text
+      })
+
+  } catch (error) {
+    console.error("Cloudinary upload error:", error);
+    alert("Failed to upload resume.");
+    submitButton.disabled = false;
+    submitButton.innerText = "Send Message"; // Reset button text
   }
 });
 
-// Form submission event
-document
-  .getElementById("career-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
-
-    if (!uploadedResumeUrl) {
-      alert("Please upload a resume before submitting.");
-      return;
-    }
-
-// Collect the form data in an object
-const formData = {
-  name: document.getElementById('name').value,
-  email: document.getElementById('email').value,
-  position: document.getElementById('position').value,
-  message: document.getElementById('message').value,
-  resume: uploadedResumeUrl, // Assuming uploadedResumeUrl holds the Cloudinary URL
-};
 
 
-console.log(formData);
-    // Send email using EmailJS
-    emailjs
-      .send("service_iqj7ado", "template_wglcwhb", formData) // Pass the form element selector as a string
-      .then((response) => {
-        alert("Application submitted successfully!");
-        console.log("Email sent successfully", response);
-      })
-      .catch((error) => {
-        alert("Failed to send application.");
-        console.log("Error sending email", error);
-      });
-  });
+
+
+// templ-      template_wglcwhb
+// service-   service_iqj7ado
+// public key -   ZCjlwK0qSqTS_l0HH
+
+
+// cloud name -      dpsf7ynmr
+// upload peset -    karrayam
+
+
+// gptsoftware1@gmail.com   used for clodinary and 
+// asonar gmail for emialjs
