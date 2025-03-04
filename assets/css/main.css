@@ -813,19 +813,23 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
+  width: 100%;
 }
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(100vh - 75px);
+  /* min-height: calc(100vh - 75px); */
+  min-height: calc(100vh - 100px);
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-@media (max-height: 500px), (max-width: 1200px) {
+@media (max-height: 500px),
+(max-width: 1200px) {
   .hero .carousel {
-    min-height: calc(100vh - 48px);
+    /* min-height: calc(100vh - 48px); */
+    min-height: calc(100vh - 70px);
   }
 }
 
@@ -835,7 +839,7 @@ section,
   display: block;
   width: 100%;
   height: 100%;
-  /* object-fit: cover;  */
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -974,7 +978,6 @@ section,
   opacity: 1;
   background: var(--accent-color);
 }
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -992,7 +995,7 @@ section,
 }
 
 .about .our-story {
-  padding: 5px;
+  padding: 75px;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 }
 

@@ -124,6 +124,7 @@
         }
         .feature-card {
             padding: 20px;
+            width: 150px;
             color: white;
             text-align: center;
             flex: 1;
@@ -132,8 +133,13 @@
             font-weight: bold;
         }
         .blue { background: #3498db; }
-        .red { background: #e74c3c; }
-        .purple { background: #8e44ad; }
+        .red { 
+          background: #3498db;
+          /* background: #e74c3c;  */
+        }
+        .purple {
+           /* background: #8e44ad;  */
+           background: #3498db;}
         
         .conferences {
             width: 90%;
@@ -167,8 +173,10 @@
             min-width: 100px;
             border-radius: 5px;
         }
-        .green { background: #2ecc71; }
-        .details {
+        .green { 
+          /* background: #2ecc71;  */
+          background: #3498db; 
+        }        .details {
             padding-left: 20px;
             flex: 1;
         }
@@ -300,25 +308,26 @@
 
 
     <section class="features">
-      <div class="feature-card blue">
-          <a style="color: white;" href="news.html">
-          <i class="fa-solid fa-newspaper">
-          
-          </i> <br> News</a>
-      </div>
-      <div class="feature-card red">
-          <a style="color: white;" href="events.html"> 
-          <i class="fa-solid fa-calendar-days"></i>
-          <br>Events
-          </a>
-      </div>
+      <a style="color: white;" href="news.html">
+        <div class="feature-card blue">
+            <i class="fa-solid fa-newspaper">
+            
+            </i> <br> News
+        </div>
+       </a>
+      <a style="color: white;" href="events.html"> 
+         <div class="feature-card red">
+            <i class="fa-solid fa-calendar-days"></i>
+            <br>Events
+          </div>
+      </a>
 
-      <div class="feature-card purple">
-          <a style="color: white;" href="reports.html">
-          <i class="fa-solid fa-chart-line"></i>
-          <br> Reports
-          </a>
-      </div>
+      <a style="color: white;" href="reports.html">
+        <div class="feature-card purple">
+            <i class="fa-solid fa-chart-line"></i>
+            <br> Reports
+          </div>
+      </a>
   </section>
 
 
@@ -392,16 +401,16 @@
          </ul>
        </div>
 
-       <!-- <div class="col-lg-2 col-md-3 footer-links">
-         <h4>Our Services</h4>
-         <ul>
-           <li><a href="#">Web Design</a></li>
-           <li><a href="#">Web Development</a></li>
-           <li><a href="#">Product Management</a></li>
-           <li><a href="#">Marketing</a></li>
-           <li><a href="#">Graphic Design</a></li>
-         </ul>
-       </div> -->
+       <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#"> Employer - Recruitment</a></li>
+          <li><a href="#">Skilling Institutions</a></li>
+          <li><a href="#">Scholarship Providers</a></li>
+          <li><a href="#">Solution to Governments</a></li>
+        </ul>
+      </div>
+     
 
        <div class="col-lg-4 col-md-12 footer-newsletter">
        
